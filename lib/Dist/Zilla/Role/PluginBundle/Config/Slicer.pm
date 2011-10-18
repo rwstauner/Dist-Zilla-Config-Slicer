@@ -45,9 +45,10 @@ to accept configuration customizations for the plugins it will load
 and merge them transparently.
 
   # dist.ini
-  [@Example::Foo]
+  [@MyBundle]
   option = 1
-  Included::Plugin.attribute = some value
+  Included::Plugin.attribute = overwrite value
+  AnotherPlug.array[] = append value
 
 This role adds a method modifier to C<bundle_config>,
 which is the method that the root C<PluginBundle> role requires,
