@@ -5,7 +5,7 @@ use warnings;
 package Dist::Zilla::Role::PluginBundle::Config::Slicer;
 # ABSTRACT: Pass Portions of Bundle Config to Plugins
 
-use Config::MVP::Slicer ();
+use Dist::Zilla::Config::Slicer ();
 use Moose::Role;
 
 requires 'bundle_config';
