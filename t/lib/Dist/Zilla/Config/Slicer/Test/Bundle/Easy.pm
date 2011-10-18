@@ -12,7 +12,7 @@ sub configure {
     [MetaNoIndex     => { file => ['.secret'], directory => [qw(t xt inc)] }],
     # ::Easy takes these name/package in reverse order
     [AutoPrereqs     => 'Scan4Prereqs'],
-    'PruneCruft',
+    [PruneCruft      => 'GoodbyeGarbage'],
   );
 }
 

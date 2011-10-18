@@ -15,7 +15,7 @@ sub bundle_config {
     ["$name/Test::Compile"  => e('Test::Compile') => {fake_home => 1}],
     ["$name/MetaNoIndex"    => e('MetaNoIndex')   => { file => ['.secret'], directory => [qw(t xt inc)] }],
     ["$name/Scan4Prereqs"   => e('AutoPrereqs')   => { }],
-    ["$name/PruneCruft"     => e('PruneCruft')    => { }],
+    ["$name/GoodbyeGarbage" => e('PruneCruft')    => { }],
   );
 }
 

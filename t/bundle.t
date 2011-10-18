@@ -13,13 +13,11 @@ foreach my $name ( map { "Test::Bundle$_" } '', '::Easy' ) {
     ["$BNAME/Test::Compile"  => e('Test::Compile') => {fake_home => 1}],
     ["$BNAME/MetaNoIndex"    => e('MetaNoIndex')   => { file => ['.secret'], directory => [qw(t xt inc)] }],
     ["$BNAME/Scan4Prereqs"   => e('AutoPrereqs')   => { }],
-    ["$BNAME/PruneCruft"     => e('PruneCruft')    => { }],
+    ["$BNAME/GoodbyeGarbage" => e('PruneCruft')    => { }],
   );
 
   my $bundled = sub { $mod->bundle_config({ name => $BNAME, payload => shift }) };
   my $i = 0;
-
-  diag explain [$bundled->({})];
 
   is_deeply
     [ $bundled->({}) ],
@@ -44,7 +42,7 @@ foreach my $name ( map { "Test::Bundle$_" } '', '::Easy' ) {
   is_deeply
     [ $bundled->({'PruneCruft.except[]' => '\.gitignore'}) ],
     [ overwrite(\@expected, $i++, { except => ['\.gitignore'] })],
-    "insert as directory for $name";
+    "insert as directory by package for $name";
 }
 
 done_testing;
