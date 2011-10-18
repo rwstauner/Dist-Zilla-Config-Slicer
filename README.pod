@@ -1,4 +1,4 @@
-=head1 Dist::Zilla::Role::PluginBundle::EmbeddedConfig
+=head1 Dist::Zilla::Config::Slicer
 
 See module POD for more information.
 
