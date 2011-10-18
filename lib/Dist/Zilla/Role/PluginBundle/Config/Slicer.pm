@@ -30,12 +30,15 @@ around bundle_config => sub {
 
 =head1 SYNOPSIS
 
-  # in your Dist::Zilla::PluginBundle::Example::Foo
+  # in Dist::Zilla::PluginBundle::MyBundle
+
   with (
     'Dist::Zilla::Role::PluginBundle', # or PluginBundle::Easy
     'Dist::Zilla::Role::PluginBundle::Config::Slicer'
   );
-  # Config::Slicer should probably be last (unless you're doing something complex)
+
+  # Config::Slicer should probably be last
+  # (unless you're doing something more complex)
 
 =head1 DESCRIPTION
 
