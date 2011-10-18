@@ -42,8 +42,7 @@ around bundle_config => sub {
 
 =head1 DESCRIPTION
 
-This role enables your
-L<Dist::Zilla::PluginBundle|Dist::Zilla::Role::PluginBundle>
+This role enables your L<Dist::Zilla> Plugin Bundle
 to accept configuration customizations for the plugins it will load
 and merge them transparently.
 
@@ -61,8 +60,9 @@ After C<bundle_config> is called
 the modifier will update the returned plugin configurations
 with any values that were customized in the main bundle config.
 
-Most of the work is done by L<Config::MVP::Slicer>.
-Check out that module if you want the same functionality
+Most of the work is done by L<Dist::Zilla::Config::Slicer>
+(a subclass of L<Config::MVP::Slicer>).
+Check out those modules if you want the same functionality
 but don't want to consume this role in your bundle.
 
 =head1 SEE ALSO
@@ -70,6 +70,7 @@ but don't want to consume this role in your bundle.
 =for :list
 * L<Config::MVP::Slicer>
 * L<Dist::Zilla>
+* L<Dist::Zilla::Config::Slicer>
 * L<Dist::Zilla::Role::PluginBundle>
 * L<Dist::Zilla::Role::PluginBundle::Easy>
 
