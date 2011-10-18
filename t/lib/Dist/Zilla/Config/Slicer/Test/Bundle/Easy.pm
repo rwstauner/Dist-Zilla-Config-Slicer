@@ -13,6 +13,7 @@ sub configure {
     # ::Easy takes these name/package in reverse order
     [AutoPrereqs     => 'Scan4Prereqs'],
     [PruneCruft      => 'GoodbyeGarbage'],
+    [PruneCruft      => 'DontNeedThese'],
   );
 }
 

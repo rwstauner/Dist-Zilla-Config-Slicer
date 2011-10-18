@@ -14,6 +14,7 @@ foreach my $name ( map { "Test::Bundle$_" } '', '::Easy' ) {
     ["$BNAME/MetaNoIndex"    => e('MetaNoIndex')   => { file => ['.secret'], directory => [qw(t xt inc)] }],
     ["$BNAME/Scan4Prereqs"   => e('AutoPrereqs')   => { }],
     ["$BNAME/GoodbyeGarbage" => e('PruneCruft')    => { }],
+    ["$BNAME/DontNeedThese"  => e('PruneCruft')    => { }],
   );
 
   my $bundled = sub { $mod->bundle_config({ name => $BNAME, payload => shift }) };
@@ -41,8 +42,9 @@ foreach my $name ( map { "Test::Bundle$_" } '', '::Easy' ) {
 
   is_deeply
     [ $bundled->({'PruneCruft.except[]' => '\.gitignore'}) ],
-    [ overwrite(\@expected, $i++, { except => ['\.gitignore'] })],
-    "insert as directory by package for $name";
+    [ overwrite(\@expected, map { ($i + $_, { except => ['\.gitignore'] }) } 0, 1)],
+    "insert as directory by package for $name (into multiple plugins)";
+  $i += 2;
 }
 
 done_testing;
@@ -50,8 +52,11 @@ done_testing;
 sub e { Dist::Zilla::Util->expand_config_package_name($_[0]); }
 
 sub overwrite {
-  my ($a, $i, $p) = @_;
+  my $a = shift;
   my @e = map { [ @$_ ] } @$a; # copy
-  $e[ $i ]->[2] = $p;
+  while(@_){
+    my ($i, $p) = splice(@_, 0, 2);
+    $e[ $i ]->[2] = $p;
+  }
   return @e;
 }

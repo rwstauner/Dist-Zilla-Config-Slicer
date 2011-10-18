@@ -16,6 +16,7 @@ sub bundle_config {
     ["$name/MetaNoIndex"    => e('MetaNoIndex')   => { file => ['.secret'], directory => [qw(t xt inc)] }],
     ["$name/Scan4Prereqs"   => e('AutoPrereqs')   => { }],
     ["$name/GoodbyeGarbage" => e('PruneCruft')    => { }],
+    ["$name/DontNeedThese"  => e('PruneCruft')    => { }],
   );
 }
 
