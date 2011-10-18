@@ -34,7 +34,7 @@ my ($section, $plugin);
 =head1 DESCRIPTION
 
 This is a subclass of L<Config::MVP::Slicer>
-that overrides the defaut
+that overrides the default
 L<match_package|Config::MVP::Slicer/match_package>
 to expand packages according to L<Dist::Zilla>'s rules.
 
