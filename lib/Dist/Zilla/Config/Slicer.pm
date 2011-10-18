@@ -11,12 +11,10 @@ use Moose;
 
 extends 'Config::MVP::Slicer';
 
-has '+match_package' => (
+sub _build_match_package {
   # NOTE: Dist::Zilla::Util 4.3 claims this method "is likely to change go away"
-  default => sub {
-    sub { Dist::Zilla::Util->expand_config_package_name($_[0]) eq $_[1] };
-  },
-);
+  return sub { Dist::Zilla::Util->expand_config_package_name($_[0]) eq $_[1] };
+}
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
