@@ -16,8 +16,8 @@ sub _build_match_package {
   return sub { Dist::Zilla::Util->expand_config_package_name($_[0]) eq $_[1] };
 }
 
-__PACKAGE__->meta->make_immutable;
 no Moose;
+__PACKAGE__->meta->make_immutable;
 1;
 
 =for test_synopsis
