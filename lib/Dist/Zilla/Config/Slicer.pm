@@ -28,7 +28,7 @@ my ($section, $plugin);
   my $slicer = Dist::Zilla::Config::Slicer->new({
     config => $section->{payload},
   });
-  
+
   $slicer->merge($plugin);
 
 =head1 DESCRIPTION
