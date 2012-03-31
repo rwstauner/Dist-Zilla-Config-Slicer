@@ -1,5 +1,10 @@
+# vim: set ts=2 sts=2 sw=2 expandtab smarttab:
+use strict;
+use warnings;
+
 package Dist::Zilla::PluginBundle::ConfigSlicer;
 # ABSTRACT: Load another bundle and override its plugin configurations
+
 use Moose;
 
 extends 'Dist::Zilla::PluginBundle::Filter';
@@ -10,7 +15,8 @@ with qw(
 __PACKAGE__->meta->make_immutable;
 1;
 
-=for test_synopsis __END__
+=for test_synopsis 1;
+__END__
 
 =head1 SYNOPSIS
 
@@ -39,7 +45,7 @@ as if it did!
 =head1 SEE ALSO
 
 =for :list
-* L<Dist::Zilla::PluginBundle::Filter
-* L<Dist::Zilla::Role::PluginBundle::Config::Slicer
+* L<Dist::Zilla::PluginBundle::Filter>
+* L<Dist::Zilla::Role::PluginBundle::Config::Slicer>
 
 =cut
