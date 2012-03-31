@@ -40,8 +40,22 @@ to expand packages according to L<Dist::Zilla>'s rules.
 
 =head1 SEE ALSO
 
-=for :list
+=begin :list
+
 * L<Config::MVP::Slicer>
-* L<Dist::Zilla::Role::PluginBundle::ConfigSlicer>
+
+* L<Dist::Zilla::Role::PluginBundle::Config::Slicer>
+
+A role to consume in your own C<PluginBundle>
+to automatically enable config slicing.
+
+* L<Dist::Zilla::PluginBundle::ConfigSlicer>
+
+A C<PluginBundle> that combines L<< @Filter|Dist::Zilla::PluginBundle::Filter >>
+with L<Dist::Zilla::Role::PluginBundle::Config::Slicer|Dist::Zilla::Role::PluginBundle::Config::Slicer>
+so you can override the configuration for a bundle
+that doesn't have config slicing built in.
+
+=end :list
 
 =cut

@@ -73,5 +73,6 @@ but don't want to consume this role in your bundle.
 * L<Dist::Zilla::Config::Slicer>
 * L<Dist::Zilla::Role::PluginBundle>
 * L<Dist::Zilla::Role::PluginBundle::Easy>
+* L<Dist::Zilla::PluginBundle::ConfigSlicer>
 
 =cut
