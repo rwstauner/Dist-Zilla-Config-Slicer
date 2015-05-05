@@ -50,7 +50,11 @@ and merge them transparently.
   [@MyBundle]
   option = 1
   Included::Plugin.attribute = overwrite value
-  AnotherPlug.array[] = append value
+  AnotherPlug.array[0] = append value
+  AnotherPlug.array[1] = append another value
+
+See L<Config::MVP::Slicer/CONFIGURATION SYNTAX> for details
+on how the configurations are handled.
 
 This role adds a method modifier to C<bundle_config>,
 which is the method that the root C<PluginBundle> role requires,
