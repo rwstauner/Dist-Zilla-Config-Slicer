@@ -38,7 +38,7 @@ L<Dist::Zilla::Role::PluginBundle::Config::Slicer|Dist::Zilla::Role::PluginBundl
 so that any plugin options will be passed in.
 
 This way you can override the plugin configuration
-for any bundle that doesn't consume 
+for any bundle that doesn't consume
 L<Dist::Zilla::Role::PluginBundle::Config::Slicer|Dist::Zilla::Role::PluginBundle::Config::Slicer>
 as if it did!
 
