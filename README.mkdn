@@ -1,10 +1,14 @@
+[![Build Status](https://travis-ci.org/rwstauner/Dist-Zilla-Config-Slicer.svg?branch=master)](https://travis-ci.org/rwstauner/Dist-Zilla-Config-Slicer)
+[![Coverage Status](https://coveralls.io/repos/rwstauner/Dist-Zilla-Config-Slicer/badge.svg?branch=master)](https://coveralls.io/r/rwstauner/Dist-Zilla-Config-Slicer?branch=master)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/Dist-Zilla-Config-Slicer.png)](http://cpants.charsbar.org/dist/overview/Dist-Zilla-Config-Slicer)
+
 # NAME
 
 Dist::Zilla::Config::Slicer - Config::MVP::Slicer customized for Dist::Zilla
 
 # VERSION
 
-version 0.201
+version 0.202
 
 # SYNOPSIS
 
